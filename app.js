@@ -7,7 +7,7 @@ const message = document.querySelector("#output");
 function checkBirthday() {
     const date = birthDate.value;
     const sumOfDate = calculateSumofDate(date);
-    if(luckyNumber.value && date != "") {
+    if(luckyNumber.value > 0 && date != "") {
         if(sumOfDate % Number(luckyNumber.value) === 0 ) {
             message.innerText = "Your birthday is lucky 🥳"
         } else {
@@ -15,7 +15,7 @@ function checkBirthday() {
         }
     }
     else {
-        message.innerText = "Both input fields required! 🥺"
+        message.innerText = "Valid input fields required! 🥺"
     }
    
 }
